@@ -1,7 +1,7 @@
 function startClassification()
 {
   navigator.mediaDevices.getUserMedia({ audio: true});
-  classifier = ml5.soundClassifier('https://teachablemachine.withgoogle.com/models/u02fOYRBx/model.json', modelReady);
+  classifier = ml5.soundClassifier("https://teachablemachine.withgoogle.com/models/u02fOYRBx/model.json", modelReady);
 }
 
 function modelReady(){
@@ -28,13 +28,13 @@ function gotResults(error, results) {
     img = document.getElementById('animal_image');
 
     if (results[0].label == "Barking") {
-      img.src = 'bark.gif';
+      img.src = "https://images.app.goo.gl/y2U5u36kGWAFJxJu6";
       dog = dog+1;
     } else if (results[0].label == "Meowing") {
-      img.src = 'meow.gif';
+      img.src = "https://images.app.goo.gl/rFYD9GHZzjaAPrPq6";
       cat = cat + 1;
     } else{
-      img.src = 'listen.gif';
+      img.src = "https://i.gifer.com/IlkL.gif";
     }
   }
 }
